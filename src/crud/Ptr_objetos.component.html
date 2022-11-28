@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6" *ngIf="!mostrarActualizar">
+            <app-Ptr_objetos-detail (emitChange)="restableceRegistro()"></app-Ptr_objetos-detail>
+        </div>
+        <div class="col-6" *ngIf="mostrarActualizar">
+            <app-Ptr_objetos-detail [id]="idPtr_objetos" (emitChange)="restableceRegistro()"></app-Ptr_objetos-detail>
+        </div>
+        <div class="col-auto mt-5">
+            <div class="card">
+<div class="card-header">Table of Ptr_objetos</div><div class="card-body">
+          <table class="table table-white table-striped">
+              <thead>
+                <tr>
+<th scope="col">#</th>
+<th scope="col">idptr_objeto</th>
+<th scope="col">idptr_dominio</th>
+<th scope="col">descripcion</th>
+<th scope="col">fecha_ultimo_cambio</th>
+<th scope="col">usuario_ultimo_cambio</th>
+<th scope="col">activo</th>
+
+<th scope="col">Update</th>
+            <th scope="col">Eliminate</th>
+ </tr>
+              </thead>
+<tbody class="table-group-divider" >
+                <tr *ngFor="let ptr_objetos of ptr_objetosAll; index as i">
+
+                  <th scope="row">{{i+1}}</th>
+<td>{{ptr_objetos.idptr_objeto}}</td>
+<td>{{ptr_objetos.idptr_dominio}}</td>
+<td>{{ptr_objetos.descripcion}}</td>
+<td>{{ptr_objetos.fecha_ultimo_cambio}}</td>
+<td>{{ptr_objetos.usuario_ultimo_cambio}}</td>
+<td>{{ptr_objetos.activo}}</td>
+ <td><button (click)="actualizar(ptr_objetos.idptr_objeto)" class="btn btn-primary"><i class="bi bi-pencil-square"></i></button></td>
+                    <td><button (click)="eliminar(ptr_objetos)" class="btn btn-danger"><i class="bi bi-trash"></i></button></td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+</div>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+<router-outlet></router-outlet> 

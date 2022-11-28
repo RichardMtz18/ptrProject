@@ -1,0 +1,85 @@
+<div class="card mt-5">
+    <div class="card-header">
+        {{this.isNew ? "Register Ptr_reglas_det" : "Update Ptr_reglas_det"}}
+    </div>
+    <div class="card-body">
+        <form (ngSubmit)="submitPtr_reglas_det(forma)" #forma="ngForm" class="row g-3">
+<div class="col-md-6">
+<label for="label-idptr_regla_det"  class="form-label">idptr_regla_det:</label>"
+<input #inputidptr_regla_det="ngModel"  type="text" name="idptr_regla_det" [ngClass]="{'is-invalid': inputidptr_regla_det.touched && inputidptr_regla_det.hasError('required') }" [(ngModel)]="ptr_reglas_det.idptr_regla_det" class="form-control" id="idptr_regla_det" value="" required>
+<div class="invalid-feedback">
+                Field required
+            </div>
+        </div>
+<div class="col-md-6">
+<label for="label-idptr_regla"  class="form-label">idptr_regla:</label>"
+<input #inputidptr_regla="ngModel"  type="text" name="idptr_regla" [ngClass]="{'is-invalid': inputidptr_regla.touched && inputidptr_regla.hasError('required') }" [(ngModel)]="ptr_reglas_det.idptr_regla" class="form-control" id="idptr_regla" value="" required>
+<div class="invalid-feedback">
+                Field required
+            </div>
+        </div>
+<div class="col-md-6">
+<label for="label-idptr_tipo_sentencia"  class="form-label">idptr_tipo_sentencia:</label>"
+<input #inputidptr_tipo_sentencia="ngModel"  type="text" name="idptr_tipo_sentencia" [ngClass]="{'is-invalid': inputidptr_tipo_sentencia.touched && inputidptr_tipo_sentencia.hasError('required') }" [(ngModel)]="ptr_reglas_det.idptr_tipo_sentencia" class="form-control" id="idptr_tipo_sentencia" value="" required>
+<div class="invalid-feedback">
+                Field required
+            </div>
+        </div>
+<div class="col-md-6">
+<label for="label-idptr_propiedad"  class="form-label">idptr_propiedad:</label>"
+<input #inputidptr_propiedad="ngModel"  type="text" name="idptr_propiedad" [ngClass]="{'is-invalid': inputidptr_propiedad.touched && inputidptr_propiedad.hasError('required') }" [(ngModel)]="ptr_reglas_det.idptr_propiedad" class="form-control" id="idptr_propiedad" value="" required>
+<div class="invalid-feedback">
+                Field required
+            </div>
+        </div>
+<div class="col-md-6">
+<label for="label-idptr_operador"  class="form-label">idptr_operador:</label>"
+<input #inputidptr_operador="ngModel"  type="text" name="idptr_operador" [ngClass]="{'is-invalid': inputidptr_operador.touched && inputidptr_operador.hasError('required') }" [(ngModel)]="ptr_reglas_det.idptr_operador" class="form-control" id="idptr_operador" value="" required>
+<div class="invalid-feedback">
+                Field required
+            </div>
+        </div>
+<div class="col-md-6">
+<label for="label-fecha_ultimo_cambio"  class="form-label">fecha_ultimo_cambio:</label>"
+<input #inputfecha_ultimo_cambio="ngModel"  type="text" name="fecha_ultimo_cambio" [ngClass]="{'is-invalid': inputfecha_ultimo_cambio.touched && inputfecha_ultimo_cambio.hasError('required') }" [(ngModel)]="ptr_reglas_det.fecha_ultimo_cambio" class="form-control" id="fecha_ultimo_cambio" value="" required>
+<div class="invalid-feedback">
+                Field required
+            </div>
+        </div>
+<div class="col-md-6">
+<label for="label-usuario_ultimo_cambio"  class="form-label">usuario_ultimo_cambio:</label>"
+<input #inputusuario_ultimo_cambio="ngModel"  type="text" name="usuario_ultimo_cambio" [ngClass]="{'is-invalid': inputusuario_ultimo_cambio.touched && inputusuario_ultimo_cambio.hasError('required') }" [(ngModel)]="ptr_reglas_det.usuario_ultimo_cambio" class="form-control" id="usuario_ultimo_cambio" value="" required>
+<div class="invalid-feedback">
+                Field required
+            </div>
+        </div>
+<div class="col-md-6">
+<label for="label-orden"  class="form-label">orden:</label>"
+<input #inputorden="ngModel"  type="text" name="orden" [ngClass]="{'is-invalid': inputorden.touched && inputorden.hasError('required') }" [(ngModel)]="ptr_reglas_det.orden" class="form-control" id="orden" value="" required>
+<div class="invalid-feedback">
+                Field required
+            </div>
+        </div>
+<div class="col-md-6">
+<label for="label-valor"  class="form-label">valor:</label>"
+<input #inputvalor="ngModel"  type="text" name="valor" [ngClass]="{'is-invalid': inputvalor.touched && inputvalor.hasError('required') }" [(ngModel)]="ptr_reglas_det.valor" class="form-control" id="valor" value="" required>
+<div class="invalid-feedback">
+                Field required
+            </div>
+        </div>
+<div class="col-md-6">
+<label for="label-activo"  class="form-label">activo:</label>"
+<input #inputactivo="ngModel"  type="text" name="activo" [ngClass]="{'is-invalid': inputactivo.touched && inputactivo.hasError('required') }" [(ngModel)]="ptr_reglas_det.activo" class="form-control" id="activo" value="" required>
+<div class="invalid-feedback">
+                Field required
+            </div>
+        </div>
+<div class="col-12 text-center">
+            <button class=" btn btn-primary" type="submit" [disabled]="forma.invalid">{{this.isNew ? "Register" : "Update"}}</button>
+            <button style="margin-left: 10px;" class=" btn btn-danger" type="button" (click)="limpiarForm(forma)">Clear</button>
+            <button *ngIf="!this.isNew" style="margin-left: 10px;" class=" btn btn-danger" type="button" (click)="emitChange.emit()">Cancel</button>
+          </div>
+      </form>
+    </div>
+</div>
+<router-outlet></router-outlet> 
