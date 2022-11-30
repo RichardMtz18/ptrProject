@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'prtcrud';
+  title = 'ptr crud';
+  open: boolean = false;
+
+  openNav(){
+    this.open = !this.open;
+  }
 }

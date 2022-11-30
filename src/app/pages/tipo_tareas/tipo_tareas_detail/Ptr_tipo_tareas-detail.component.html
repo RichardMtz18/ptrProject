@@ -1,3 +1,4 @@
+<section class="add-tipo-tareas-section">
 <div class="card mt-5">
     <div class="card-header">
         {{this.isNew ? "Register Ptr_tipo_tareas" : "Update Ptr_tipo_tareas"}}
@@ -43,6 +44,8 @@
             <button class=" btn btn-primary" type="submit" [disabled]="forma.invalid">{{this.isNew ? "Register" : "Update"}}</button>
             <button style="margin-left: 10px;" class=" btn btn-danger" type="button" (click)="limpiarForm(forma)">Clear</button>
             <button *ngIf="!this.isNew" style="margin-left: 10px;" class=" btn btn-danger" type="button" (click)="emitChange.emit()">Cancel</button>
+            
+            <a routerLink="../"> <button class=" btn btn-secondary" type="button">Regresar</button></a>
           </div>
       </form>
     </div>

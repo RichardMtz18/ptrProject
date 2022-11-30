@@ -1,9 +1,12 @@
+<section class="add-accion-section">
+    
 <div class="card mt-5">
     <div class="card-header">
         {{this.isNew ? "Register Ptr_acciones" : "Update Ptr_acciones"}}
     </div>
     <div class="card-body">
         <form (ngSubmit)="submitPtr_acciones(forma)" #forma="ngForm" class="row g-3">
+    <!-- </div> -->
 <div class="col-md-6">
 <label for="label-idptr_accion"  class="form-label">idptr_accion:</label>"
 <input #inputidptr_accion="ngModel"  type="text" name="idptr_accion" [ngClass]="{'is-invalid': inputidptr_accion.touched && inputidptr_accion.hasError('required') }" [(ngModel)]="ptr_acciones.idptr_accion" class="form-control" id="idptr_accion" value="" required>
@@ -71,6 +74,8 @@
             <button class=" btn btn-primary" type="submit" [disabled]="forma.invalid">{{this.isNew ? "Register" : "Update"}}</button>
             <button style="margin-left: 10px;" class=" btn btn-danger" type="button" (click)="limpiarForm(forma)">Clear</button>
             <button *ngIf="!this.isNew" style="margin-left: 10px;" class=" btn btn-danger" type="button" (click)="emitChange.emit()">Cancel</button>
+
+            <a routerLink="../"> <button class=" btn btn-secondary" type="button">Regresar</button></a>
           </div>
       </form>
     </div>

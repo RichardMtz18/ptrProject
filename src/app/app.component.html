@@ -1,25 +1,136 @@
-<nav class="bg-withe">
-<nav class="navbar navbar-expand-lg bg-white" >
-  <div class="container-fluid">
-<a class="navbar-brand text-info" href="/Ptr_acciones">Ptr_acciones</a>
-<a class="navbar-brand text-info" href="/Ptr_dominios">Ptr_dominios</a>
-<a class="navbar-brand text-info" href="/Ptr_objetos">Ptr_objetos</a>
-<a class="navbar-brand text-info" href="/Ptr_operadores">Ptr_operadores</a>
-<a class="navbar-brand text-info" href="/Ptr_proceso_tareas">Ptr_proceso_tareas</a>
-<a class="navbar-brand text-info" href="/Ptr_procesos">Ptr_procesos</a>
-<a class="navbar-brand text-info" href="/Ptr_procesos_det">Ptr_procesos_det</a>
-<a class="navbar-brand text-info" href="/Ptr_propiedades">Ptr_propiedades</a>
-<a class="navbar-brand text-info" href="/Ptr_reglas">Ptr_reglas</a>
-<a class="navbar-brand text-info" href="/Ptr_reglas_det">Ptr_reglas_det</a>
-<a class="navbar-brand text-info" href="/Ptr_sentencias">Ptr_sentencias</a>
-<a class="navbar-brand text-info" href="/Ptr_tarea_reglas">Ptr_tarea_reglas</a>
-<a class="navbar-brand text-info" href="/Ptr_tareas">Ptr_tareas</a>
-<a class="navbar-brand text-info" href="/Ptr_tipo_de_datos">Ptr_tipo_de_datos</a>
-<a class="navbar-brand text-info" href="/Ptr_tipo_dominios">Ptr_tipo_dominios</a>
-<a class="navbar-brand text-info" href="/Ptr_tipo_reglas">Ptr_tipo_reglas</a>
-<a class="navbar-brand text-info" href="/Ptr_tipo_tareas">Ptr_tipo_tareas</a>
-<div class="collapse navbar-collapse " id="navbarNav">
-    </div>
+<div #sideBar class="sidebar" [ngClass]="{ open: !!open }">
+  <div class="logo-details">
+    <a routerLink="home" style="text-decoration: none;">
+      <div class="logo_name"><i class="bi bi-box icon">PTR</i></div>
+    </a>
+    <i
+      class="bi bi-list"
+      id="btn"
+      (click)="openNav()"
+      [ngClass]="{ 'bi-list': !open, 'bi-filter-right': open }"
+    ></i>
   </div>
-</nav>
-<router-outlet></router-outlet> 
+  <ul class="nav-list">
+    <li>
+      <a routerLink="Ptr_acciones">
+        <i class="bi bi-hand-index-thumb"></i>
+        <span class="links_name">Acciones</span>
+      </a>
+      <span class="tooltip">Acciones</span>
+    </li>
+
+    <li>
+      <a routerLink="Ptr_dominios">
+        <i class="bi bi-globe2"></i>
+        <span class="links_name">Dominios</span>
+      </a>
+      <span class="tooltip">Dominios</span>
+    </li>
+
+    <li>
+      <a routerLink="Ptr_objetos">
+        <i class="bi bi-box"></i>
+        <span class="links_name">Objetos</span>
+      </a>
+      <span class="tooltip">Objetos</span>
+    </li>
+
+    <li>
+      <a routerLink="Ptr_operadores">
+        <i class="bi bi-code-slash"></i>
+        <span class="links_name">Operadores</span>
+      </a>
+      <span class="tooltip">Operadores</span>
+    </li>
+
+    <li>
+      <a routerLink="Ptr_procesos_det">
+        <i class="bi bi-clipboard-pulse"></i>
+        <span class="links_name">Procesos Det</span>
+      </a>
+      <span class="tooltip">Procesos Det</span>
+    </li>
+
+    <li>
+      <a routerLink="Ptr_procesos">
+        <i class="bi bi-activity"></i>
+        <span class="links_name">Procesos</span>
+      </a>
+      <span class="tooltip">Procesos</span>
+    </li>
+
+    <li>
+      <a routerLink="Ptr_proceso_tareas">
+        <i class="bi bi-cpu"></i>
+        <span class="links_name">Procesos Tareas</span>
+      </a>
+      <span class="tooltip">Procesos Tareas</span>
+    </li>
+
+    <li>
+      <a routerLink="Ptr_propiedades">
+        <i class="bi bi-sliders"></i>
+        <span class="links_name">Propiedades</span>
+      </a>
+      <span class="tooltip">Propiedades</span>
+    </li>
+
+    <li>
+      <a routerLink="Ptr_reglas">
+        <i class="bi bi-shield"></i>
+        <span class="links_name">Reglas</span>
+      </a>
+      <span class="tooltip">Reglas</span>
+    </li>
+    <li>
+      <a routerLink="Ptr_reglas_det">
+        <i class="bi bi-shield-shaded"></i>
+        <span class="links_name">Reglas Det</span>
+      </a>
+      <span class="tooltip">Reglas Det</span>
+    </li>
+    <li>
+      <a routerLink="Ptr_sentencias">
+        <i class="bi bi-filter-circle"></i>
+        <span class="links_name">Sentencias</span>
+      </a>
+      <span class="tooltip">Sentencias</span>
+    </li>
+    <li>
+      <a routerLink="Ptr_tareas">
+        <i class="bi bi-receipt-cutoff"></i>
+        <span class="links_name">Tareas</span>
+      </a>
+      <span class="tooltip">Tareas</span>
+    </li>
+
+    <li>
+      <a routerLink="Ptr_tipo_tareas">
+        <i class="bi bi-window-dock"></i>
+        <span class="links_name">Tipo Tarea</span>
+      </a>
+      <span class="tooltip">Tipo Tarea</span>
+    </li>
+
+    <li>
+      <a routerLink="Ptr_tarea_reglas">
+        <i class="bi bi-lock"></i>
+        <span class="links_name">Tareas Reglas</span>
+      </a>
+      <span class="tooltip">Tareas Reglas</span>
+    </li>
+
+    <li>
+      <a routerLink="Ptr_tipo_de_datos">
+        <i class="bi bi-file-binary"></i>
+        <span class="links_name">Tipo Dato</span>
+      </a>
+      <span class="tooltip">Tipo Datos</span>
+    </li>
+  </ul>
+</div>
+<section class="home-section">
+  <div class="container-fluid">
+    <router-outlet></router-outlet>
+  </div>
+</section>

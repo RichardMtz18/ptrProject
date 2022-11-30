@@ -54,25 +54,62 @@ import { Ptr_tipo_tareasDetailComponent } from 'src/app/pages/tipo_tareas/tipo_t
 import { Ptr_tipo_tareasComponent } from 'src/app/pages/tipo_tareas/Ptr_tipo_tareas.component';
 import { HomeComponent } from './pages/home/home.component';
 
+
+
 const routes: Routes = [
 {path: "home", component: HomeComponent},
-{path: 'Ptr_acciones', component:Ptr_accionesComponent}, 
+
+{path: 'Ptr_acciones', component:Ptr_accionesComponent},
+{path: 'Ptr_acciones/Ptr_acciones_detail', component:Ptr_accionesDetailComponent},
+
 {path: 'Ptr_dominios', component:Ptr_dominiosComponent}, 
+{path: 'Ptr_dominios/Ptr_dominios_detail', component:Ptr_dominiosDetailComponent},
+
 {path: 'Ptr_objetos', component:Ptr_objetosComponent}, 
+{path: 'Ptr_objetos/Ptr_objetos_detail', component:Ptr_objetosDetailComponent}, 
+
 {path: 'Ptr_operadores', component:Ptr_operadoresComponent}, 
-{path: 'Ptr_proceso_tareas', component:Ptr_proceso_tareasComponent}, 
+{path: 'Ptr_operadores/Ptr_operadores_detail', component:Ptr_operadoresDetailComponent},
+
+{path: 'Ptr_proceso_tareas', component:Ptr_proceso_tareasComponent},
+{path: 'Ptr_proceso_tareas/Ptr_proceso_tareas_detail', component:Ptr_proceso_tareasDetailComponent},
+
 {path: 'Ptr_procesos', component:Ptr_procesosComponent}, 
-{path: 'Ptr_procesos_det', component:Ptr_procesos_detComponent}, 
+{path: 'Ptr_procesos/Ptr_procesos_detail', component:Ptr_procesosDetailComponent},
+
+{path: 'Ptr_procesos_det', component:Ptr_procesos_detComponent},
+{path: 'Ptr_procesos_det/Ptr_procesos_det_detail', component:Ptr_procesos_detDetailComponent},
+
 {path: 'Ptr_propiedades', component:Ptr_propiedadesComponent}, 
-{path: 'Ptr_reglas', component:Ptr_reglasComponent}, 
+{path: 'Ptr_propiedades/Ptr_propiedades_detail', component:Ptr_propiedadesDetailComponent},
+
+{path: 'Ptr_reglas', component:Ptr_reglasComponent},
+{path: 'Ptr_reglas/Ptr_reglas_detail', component:Ptr_reglasDetailComponent},
+
 {path: 'Ptr_reglas_det', component:Ptr_reglas_detComponent}, 
+{path: 'Ptr_reglas_det/Ptr_reglas_det_detail', component:Ptr_reglas_detDetailComponent},
+
 {path: 'Ptr_sentencias', component:Ptr_sentenciasComponent}, 
-{path: 'Ptr_tarea_reglas', component:Ptr_tarea_reglasComponent}, 
+{path: 'Ptr_sentencias/Ptr_sentencias_detail', component:Ptr_sentenciasDetailComponent},
+
+{path: 'Ptr_tarea_reglas', component:Ptr_tarea_reglasComponent},
+{path: 'Ptr_tarea_reglas/Ptr_tarea_reglas_detail', component:Ptr_tarea_reglasDetailComponent},
+
 {path: 'Ptr_tareas', component:Ptr_tareasComponent}, 
+{path: 'Ptr_tareas/Ptr_tareas_detail', component:Ptr_tareasDetailComponent},
+
 {path: 'Ptr_tipo_de_datos', component:Ptr_tipo_de_datosComponent}, 
+{path: 'Ptr_tipo_de_datos/Ptr_tipo_de_datos_detail', component:Ptr_tipo_de_datosDetailComponent},
+
 {path: 'Ptr_tipo_dominios', component:Ptr_tipo_dominiosComponent}, 
+{path: 'Ptr_tipo_dominios/Ptr_tipo_dominios_detail', component:Ptr_tipo_dominiosDetailComponent},
+
 {path: 'Ptr_tipo_reglas', component:Ptr_tipo_reglasComponent}, 
+{path: 'Ptr_tipo_reglas/Ptr_tipo_reglas_detail', component:Ptr_tipo_reglasDetailComponent},
+
 {path: 'Ptr_tipo_tareas', component:Ptr_tipo_tareasComponent}, 
+{path: 'Ptr_tipo_tareas/Ptr_tipo_tareas_detail', component:Ptr_tipo_tareasDetailComponent},
+
 {path: "", redirectTo: "home", pathMatch: "full"},
 
 ];

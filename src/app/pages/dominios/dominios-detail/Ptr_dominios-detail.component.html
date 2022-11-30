@@ -1,57 +1,61 @@
-<div class="card mt-5">
-    <div class="card-header">
-        {{this.isNew ? "Register Ptr_dominios" : "Update Ptr_dominios"}}
-    </div>
-    <div class="card-body">
-        <form (ngSubmit)="submitPtr_dominios(forma)" #forma="ngForm" class="row g-3">
-<div class="col-md-6">
-<label for="label-idptr_dominio"  class="form-label">idptr_dominio:</label>"
-<input #inputidptr_dominio="ngModel"  type="text" name="idptr_dominio" [ngClass]="{'is-invalid': inputidptr_dominio.touched && inputidptr_dominio.hasError('required') }" [(ngModel)]="ptr_dominios.idptr_dominio" class="form-control" id="idptr_dominio" value="" required>
-<div class="invalid-feedback">
-                Field required
-            </div>
+<section class="add-dominios-section">
+<!--  
+    <div class="card mt-5">
+        <div class="card-header">
+            {{this.isNew ? "Register Ptr_dominios" : "Update Ptr_dominios"}}
         </div>
-<div class="col-md-6">
-<label for="label-idptr_tipo_dominio"  class="form-label">idptr_tipo_dominio:</label>"
-<input #inputidptr_tipo_dominio="ngModel"  type="text" name="idptr_tipo_dominio" [ngClass]="{'is-invalid': inputidptr_tipo_dominio.touched && inputidptr_tipo_dominio.hasError('required') }" [(ngModel)]="ptr_dominios.idptr_tipo_dominio" class="form-control" id="idptr_tipo_dominio" value="" required>
-<div class="invalid-feedback">
-                Field required
+        <div class="card-body">
+            <form (ngSubmit)="submitPtr_dominios(forma)" #forma="ngForm" class="row g-3">
+    <div class="col-md-6">
+    <label for="label-idptr_objeto"  class="form-label">idptr_objeto:</label>"
+    <input #inputidptr_objeto="ngModel"  type="text" name="idptr_objeto" [ngClass]="{'is-invalid': inputidptr_objeto.touched && inputidptr_objeto.hasError('required') }" [(ngModel)]="ptr_dominios.idptr_dominio" class="form-control" id="idptr_objeto" value="" required>
+    <div class="invalid-feedback">
+                    Field required
+                </div>
             </div>
-        </div>
-<div class="col-md-6">
-<label for="label-descripcion"  class="form-label">descripcion:</label>"
-<input #inputdescripcion="ngModel"  type="text" name="descripcion" [ngClass]="{'is-invalid': inputdescripcion.touched && inputdescripcion.hasError('required') }" [(ngModel)]="ptr_dominios.descripcion" class="form-control" id="descripcion" value="" required>
-<div class="invalid-feedback">
-                Field required
+    <div class="col-md-6">
+    <label for="label-idptr_dominio"  class="form-label">idptr_dominio:</label>"
+    <input #inputidptr_dominio="ngModel"  type="text" name="idptr_dominio" [ngClass]="{'is-invalid': inputidptr_dominio.touched && inputidptr_dominio.hasError('required') }" [(ngModel)]="ptr_dominios.idptr_dominio" class="form-control" id="idptr_dominio" value="" required>
+    <div class="invalid-feedback">
+                    Field required
+                </div>
             </div>
-        </div>
-<div class="col-md-6">
-<label for="label-fecha_ultimo_cambio"  class="form-label">fecha_ultimo_cambio:</label>"
-<input #inputfecha_ultimo_cambio="ngModel"  type="text" name="fecha_ultimo_cambio" [ngClass]="{'is-invalid': inputfecha_ultimo_cambio.touched && inputfecha_ultimo_cambio.hasError('required') }" [(ngModel)]="ptr_dominios.fecha_ultimo_cambio" class="form-control" id="fecha_ultimo_cambio" value="" required>
-<div class="invalid-feedback">
-                Field required
+    <div class="col-md-6">
+    <label for="label-descripcion"  class="form-label">descripcion:</label>"
+    <input #inputdescripcion="ngModel"  type="text" name="descripcion" [ngClass]="{'is-invalid': inputdescripcion.touched && inputdescripcion.hasError('required') }" [(ngModel)]="ptr_dominios.descripcion" class="form-control" id="descripcion" value="" required>
+    <div class="invalid-feedback">
+                    Field required
+                </div>
             </div>
-        </div>
-<div class="col-md-6">
-<label for="label-usuario_ultimo_cambio"  class="form-label">usuario_ultimo_cambio:</label>"
-<input #inputusuario_ultimo_cambio="ngModel"  type="text" name="usuario_ultimo_cambio" [ngClass]="{'is-invalid': inputusuario_ultimo_cambio.touched && inputusuario_ultimo_cambio.hasError('required') }" [(ngModel)]="ptr_dominios.usuario_ultimo_cambio" class="form-control" id="usuario_ultimo_cambio" value="" required>
-<div class="invalid-feedback">
-                Field required
+    <div class="col-md-6">
+    <label for="label-fecha_ultimo_cambio"  class="form-label">fecha_ultimo_cambio:</label>"
+    <input #inputfecha_ultimo_cambio="ngModel"  type="text" name="fecha_ultimo_cambio" [ngClass]="{'is-invalid': inputfecha_ultimo_cambio.touched && inputfecha_ultimo_cambio.hasError('required') }" [(ngModel)]="ptr_dominios.fecha_ultimo_cambio" class="form-control" id="fecha_ultimo_cambio" value="" required>
+    <div class="invalid-feedback">
+                    Field required
+                </div>
             </div>
-        </div>
-<div class="col-md-6">
-<label for="label-activo"  class="form-label">activo:</label>"
-<input #inputactivo="ngModel"  type="text" name="activo" [ngClass]="{'is-invalid': inputactivo.touched && inputactivo.hasError('required') }" [(ngModel)]="ptr_dominios.activo" class="form-control" id="activo" value="" required>
-<div class="invalid-feedback">
-                Field required
+    <div class="col-md-6">
+    <label for="label-usuario_ultimo_cambio"  class="form-label">usuario_ultimo_cambio:</label>"
+    <input #inputusuario_ultimo_cambio="ngModel"  type="text" name="usuario_ultimo_cambio" [ngClass]="{'is-invalid': inputusuario_ultimo_cambio.touched && inputusuario_ultimo_cambio.hasError('required') }" [(ngModel)]="ptr_dominios.usuario_ultimo_cambio" class="form-control" id="usuario_ultimo_cambio" value="" required>
+    <div class="invalid-feedback">
+                    Field required
+                </div>
             </div>
+    <div class="col-md-6">
+    <label for="label-activo"  class="form-label">activo:</label>"
+    <input #inputactivo="ngModel"  type="text" name="activo" [ngClass]="{'is-invalid': inputactivo.touched && inputactivo.hasError('required') }" [(ngModel)]="ptr_dominios.activo" class="form-control" id="activo" value="" required>
+    <div class="invalid-feedback">
+                    Field required
+                </div>
+            </div>
+    <div class="col-12 text-center">
+                <button class=" btn btn-primary" type="submit" [disabled]="forma.invalid">{{this.isNew ? "Register" : "Update"}}</button>
+                <button style="margin-left: 10px;" class=" btn btn-danger" type="button" (click)="limpiarForm(forma)">Clear</button>
+                <button *ngIf="!this.isNew" style="margin-left: 10px;" class=" btn btn-danger" type="button" (click)="emitChange.emit()">Cancel</button>
+              
+                <a routerLink="../"> <button class=" btn btn-secondary" type="button">Regresar</button></a>
+            </div>
+          </form>
         </div>
-<div class="col-12 text-center">
-            <button class=" btn btn-primary" type="submit" [disabled]="forma.invalid">{{this.isNew ? "Register" : "Update"}}</button>
-            <button style="margin-left: 10px;" class=" btn btn-danger" type="button" (click)="limpiarForm(forma)">Clear</button>
-            <button *ngIf="!this.isNew" style="margin-left: 10px;" class=" btn btn-danger" type="button" (click)="emitChange.emit()">Cancel</button>
-          </div>
-      </form>
-    </div>
-</div>
-<router-outlet></router-outlet> 
+    </div> -->
+    <router-outlet></router-outlet>
