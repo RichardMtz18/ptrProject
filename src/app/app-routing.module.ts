@@ -1,5 +1,7 @@
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MainPageComponent } from './components/mainPage/mainPage.component';
+
 import { Ptr_accionesDetailComponent } from 'src/app/pages/acciones/acciones-detail/Ptr_acciones-detail.component';
 import { Ptr_accionesComponent } from 'src/app/pages/acciones/Ptr_acciones.component';
 
@@ -35,17 +37,25 @@ import { Ptr_sentenciasComponent } from 'src/app/pages/sentencias/Ptr_sentencias
 
 import { Ptr_tarea_reglasDetailComponent } from 'src/app/pages/tarea_reglas/tarea_reglas_detail/Ptr_tarea_reglas-detail.component';
 import { Ptr_tarea_reglasComponent } from 'src/app/pages/tarea_reglas/Ptr_tarea_reglas.component';
+
 import { Ptr_tareasDetailComponent } from 'src/app/pages/tareas/tareas_detail/Ptr_tareas-detail.component';
 import { Ptr_tareasComponent } from 'src/app/pages/tareas/Ptr_tareas.component';
+
 import { Ptr_tipo_de_datosDetailComponent } from 'src/app/pages/tipo_datos/tipo_datos_detail/Ptr_tipo_de_datos-detail.component';
 import { Ptr_tipo_de_datosComponent } from 'src/app/pages/tipo_datos/Ptr_tipo_de_datos.component';
+
 import { Ptr_tipo_dominiosDetailComponent } from 'src/app/pages/tipo_dominios/tipo_dominios_detail/Ptr_tipo_dominios-detail.component';
 import { Ptr_tipo_dominiosComponent } from 'src/app/pages/tipo_dominios/Ptr_tipo_dominios.component';
+
 import { Ptr_tipo_reglasDetailComponent } from 'src/app/pages/tipo_reglas/tipo_reglas_detail/Ptr_tipo_reglas-detail.component';
 import { Ptr_tipo_reglasComponent } from 'src/app/pages/tipo_reglas/Ptr_tipo_reglas.component';
+
 import { Ptr_tipo_tareasDetailComponent } from 'src/app/pages/tipo_tareas/tipo_tareas_detail/Ptr_tipo_tareas-detail.component';
 import { Ptr_tipo_tareasComponent } from 'src/app/pages/tipo_tareas/Ptr_tipo_tareas.component';
+import { HomeComponent } from './pages/home/home.component';
+
 const routes: Routes = [
+{path: "home", component: HomeComponent},
 {path: 'Ptr_acciones', component:Ptr_accionesComponent}, 
 {path: 'Ptr_dominios', component:Ptr_dominiosComponent}, 
 {path: 'Ptr_objetos', component:Ptr_objetosComponent}, 
@@ -63,6 +73,8 @@ const routes: Routes = [
 {path: 'Ptr_tipo_dominios', component:Ptr_tipo_dominiosComponent}, 
 {path: 'Ptr_tipo_reglas', component:Ptr_tipo_reglasComponent}, 
 {path: 'Ptr_tipo_tareas', component:Ptr_tipo_tareasComponent}, 
+{path: "", redirectTo: "home", pathMatch: "full"},
+
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

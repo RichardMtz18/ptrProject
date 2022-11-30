@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { MainPageComponent } from './components/mainPage/mainPage.component';
+import { HomeComponent } from './pages/home/home.component';
 import { Ptr_accionesDetailComponent } from 'src/app/pages/acciones/acciones-detail/Ptr_acciones-detail.component';
 import { Ptr_accionesComponent } from 'src/app/pages/acciones/Ptr_acciones.component';
 import { Ptr_dominiosDetailComponent } from 'src/app/pages/dominios/dominios-detail/Ptr_dominios-detail.component';
@@ -38,9 +40,12 @@ import { Ptr_tipo_dominiosDetailComponent } from 'src/app/pages/tipo_dominios/ti
 import { Ptr_tipo_reglasDetailComponent } from 'src/app/pages/tipo_reglas/tipo_reglas_detail/Ptr_tipo_reglas-detail.component';
  import { Ptr_tipo_tareasComponent } from 'src/app/pages/tipo_tareas/Ptr_tipo_tareas.component';
 import { Ptr_tipo_tareasDetailComponent } from 'src/app/pages/tipo_tareas/tipo_tareas_detail/Ptr_tipo_tareas-detail.component';
+
  @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
+    MainPageComponent,
 Ptr_accionesComponent,
 Ptr_accionesDetailComponent,
  Ptr_dominiosComponent,
